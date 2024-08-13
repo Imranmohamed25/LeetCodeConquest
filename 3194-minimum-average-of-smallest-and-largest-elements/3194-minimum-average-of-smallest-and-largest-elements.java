@@ -1,25 +1,20 @@
-class Solution {
+public class Solution {
     public double minimumAverage(int[] nums) {
-        Arrays.sort(nums);
-        ArrayList<Double> list = new ArrayList<>();
-        for (double i : nums) {
-            list.add(i);
-        }
-        return find(list);
-    }
+        if (nums.length == 0) 
+        return 0;
 
-    ArrayList<Double> res = new ArrayList<>();
-    public double find(ArrayList<Double> list) {
-        if(list.isEmpty()){
-            return Collections.min(res);
+        Arrays.sort(nums);
+        double minAverage = Double.MAX_VALUE;
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                double average = (nums[i] + nums[j]) / 2.0;
+                if (average < minAverage) {
+                    minAverage = average;
+                }
+            }
         }
-        for (int i = 0; i < list.size(); i++) {
-            double ans = (list.get(i) + list.get(list.size() - 1)) / 2;
-            res.add(ans);
-            break;
-        }
-        list.remove(0);
-        list.remove(list.size() - 1);
-        return find(list);
+        return minAverage;
     }
 }
