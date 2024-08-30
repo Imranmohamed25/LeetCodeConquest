@@ -13,9 +13,3 @@ class Solution {
         return a != b;
     }
 }
-            // int dig = 0;
-            // int temp = nums[i];
-            // while(temp > 0){
-            //     dig++;
-            //     temp = temp / 10;
-            // }
