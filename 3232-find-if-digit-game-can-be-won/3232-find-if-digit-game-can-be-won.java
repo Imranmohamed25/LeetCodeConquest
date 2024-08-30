@@ -6,7 +6,7 @@ class Solution {
             if(nums[i] < 10){
                 a += nums[i];
             }
-            else if(nums[i] > 9){
+            else{
                 b += nums[i];
             }
         }
