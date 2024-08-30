@@ -1,21 +1,16 @@
 class Solution {
     public boolean canAliceWin(int[] nums) {
-        int a1 = 0, b2 = 0;
-        int b1 = 0, a2 = 0;
+        int a = 0;
+        int b = 0;
         for(int i = 0; i < nums.length; i++){
             if(nums[i] < 10){
-                a1 += nums[i];
-                b2 += nums[i];
+                a += nums[i];
             }
             else if(nums[i] > 9){
-                b1 += nums[i];
-                a2 += nums[i];
+                b += nums[i];
             }
         }
-        if( a1 > b1 || a2 > b2){
-            return true;
-        }
-        return false;
+        return a != b;
     }
 }
             // int dig = 0;
