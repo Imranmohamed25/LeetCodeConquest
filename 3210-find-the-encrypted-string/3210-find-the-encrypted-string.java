@@ -1,11 +1,6 @@
 class Solution {
     public String getEncryptedString(String s, int k) {
-        return rotate(s.toCharArray(), k);
-    }
-    public String rotate(char[] arr, int k) {
-        if(k == 0){
-            return new String(arr);
-        }
+        char[] arr = s.toCharArray();
         int n = arr.length;
         for (int i = 0; i < k; i++) {
             char temp = arr[0];
