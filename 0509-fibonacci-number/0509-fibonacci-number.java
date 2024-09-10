@@ -14,6 +14,3 @@ class Solution {
         return n2;
     }
 }
-        //ArrayList<Integer> list = new ArrayList<>();
-        //while(sum<n)
-        // list.add(sum);
